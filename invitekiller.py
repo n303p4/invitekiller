@@ -17,7 +17,7 @@ async def on_message(message):
     """When people post invite links, deal with them accordingly."""
     message_urls = re.findall(REGEX_URL, message.content)
     for url in message_urls:
-        if client.get_invite(url):
+        if await client.get_invite(url):
             await message.delete()
             # Give the offender a warning first.
             # If they're a repeat offender, then ban them.
