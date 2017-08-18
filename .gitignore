@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# This file contains the Discord bot token
+oauth.txt
